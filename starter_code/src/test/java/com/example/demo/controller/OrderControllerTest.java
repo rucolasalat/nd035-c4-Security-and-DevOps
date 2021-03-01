@@ -63,6 +63,33 @@ public class OrderControllerTest {
     }
 
     @Test
+    public void submit_crazy_path() {
+
+        Cart cart = new Cart();
+        cart.setId(1L);
+
+        User user = new User();
+        user.setUsername("testUser");
+        user.setId(1L);
+        user.setCart(cart);
+        cart.setUser(user);
+
+        Item item = new Item();
+        item.setId(1L);
+        item.setName("itemName");
+        item.setPrice(BigDecimal.valueOf(1.99));
+
+        cart.addItem(item);
+
+        when(userRepository.findByUsername("otherUser")).thenReturn(null);
+
+        final ResponseEntity<UserOrder> response = orderController.submit("testUser");
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void getOrdersForUser_happy_path() {
 
         User user = new User();

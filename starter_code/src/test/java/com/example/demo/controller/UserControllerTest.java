@@ -64,6 +64,21 @@ public class UserControllerTest {
     }
 
     @Test
+    public void createUser_crazy_path() {
+        when(encoder.encode(anyString())).thenReturn("thisIsHashed");
+
+        CreateUserRequest r = new CreateUserRequest();
+        r.setUsername("testUsername");
+        r.setPassword("toosrt");
+
+        final ResponseEntity<User> response = userController.createUser(r);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
+
+
+    @Test
     public void findById_happy_path() {
         final ResponseEntity<User> response = userController.findById(0L);
         assertNotNull(response);

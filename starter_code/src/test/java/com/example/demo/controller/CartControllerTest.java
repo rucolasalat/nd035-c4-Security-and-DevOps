@@ -64,11 +64,12 @@ public class CartControllerTest {
         when(userRepository.findByUsername("testUser")).thenReturn(user);
         when(itemRepository.findById(1L)).thenReturn(Optional.of(item));
 
-        final ResponseEntity<Cart> response = cartController.addTocart(request);
+        final ResponseEntity<Cart> response = cartController.addToCart(request);
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
         assertEquals("testUser", response.getBody().getUser().getUsername());
+        assertEquals(1L, response.getBody().getUser().getId());
     }
 
     @Test
@@ -96,7 +97,7 @@ public class CartControllerTest {
         when(userRepository.findByUsername("testUser")).thenReturn(user);
         when(itemRepository.findById(1L)).thenReturn(Optional.of(item));
 
-        final ResponseEntity<Cart> response = cartController.addTocart(request);
+        final ResponseEntity<Cart> response = cartController.addToCart(request);
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
@@ -129,12 +130,45 @@ public class CartControllerTest {
         when(userRepository.findByUsername("testUser")).thenReturn(user);
         when(itemRepository.findById(1L)).thenReturn(Optional.of(item));
 
-        cartController.addTocart(request);
+        cartController.addToCart(request);
         final ResponseEntity<Cart> response = cartController.removeFromCart(request);
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
         assertEquals(new BigDecimal("0.00"), response.getBody().getTotal());
+    }
+
+    @Test
+    public void removeFromCart_crazy_path(){
+
+        Cart cart = new Cart();
+        cart.setId(1L);
+
+        User user = new User();
+        user.setUsername("testUser");
+        user.setId(1L);
+        user.setCart(cart);
+        cart.setUser(user);
+
+        Item item = new Item();
+        item.setId(1L);
+        item.setName("itemName");
+        item.setPrice(BigDecimal.valueOf(1.99));
+
+        ModifyCartRequest request = new ModifyCartRequest();
+        request.setItemId(1L);
+        request.setQuantity(1);
+        request.setUsername("testUser");
+
+        when(userRepository.findByUsername("otherUser")).thenReturn(null);
+        when(itemRepository.findById(99L)).thenReturn(null);
+
+        cartController.addToCart(request);
+        final ResponseEntity<Cart> response = cartController.removeFromCart(request);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+        assertNull(response.getBody());
     }
 
 }

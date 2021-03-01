@@ -29,6 +29,25 @@ public class ItemControllerTest {
     }
 
     @Test
+    public void getItems_happy_path() {
+        Item item = new Item();
+        item.setId(1l);
+        item.setName("Fake Item");
+        item.setDescription("Fake Description");
+        List<Item> list = new ArrayList<Item>();
+        list.add(item);
+
+        when(itemRepository.findAll()).thenReturn(list);
+        final ResponseEntity<List<Item>> response = itemController.getItems();
+
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+        assertEquals("Fake Item", response.getBody().get(0).getName());
+        assertEquals("Fake Description", response.getBody().get(0).getDescription());
+    }
+
+
+    @Test
     public void getItemById_happy_path() {
         Item item = new Item();
         item.setId(1l);

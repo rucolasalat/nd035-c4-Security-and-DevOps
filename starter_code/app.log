@@ -208,3 +208,56 @@ insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505
 2021-03-01 12:32:27,188 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
 2021-03-01 12:32:38,286 DEBUG c.e.d.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
 2021-03-01 12:32:41,904 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 15.854 seconds (JVM running for 19.521)
+2021-03-01 14:49:03,169 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:49:03,340 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 14:50:17,291 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:50:17,443 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 14:50:26,063 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:50:26,297 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 14:54:21,291 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:54:21,502 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 14:58:59,577 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:58:59,708 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 14:59:13,925 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 14:59:14,165 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:00:57,655 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:00:57,839 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:02:23,588 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:02:23,808 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:09:32,279 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:09:32,628 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:10:17,085 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:10:17,264 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:15:03,326 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:15:03,472 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:17:54,617 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:17:54,628 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:17:54,780 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:18:26,884 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:18:26,896 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:18:27,071 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:18:59,001 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:19:46,048 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:19:58,629 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:19:58,640 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:19:58,846 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:22:02,250 ERROR c.e.d.c.OrderController [main] No user found for username: testUser
+2021-03-01 15:22:52,741 ERROR c.e.d.c.OrderController [main] No user found for username: testUser
+2021-03-01 15:23:12,331 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:23:12,349 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:23:12,605 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:23:12,607 ERROR c.e.d.c.OrderController [main] No user found for username: testUser
+2021-03-01 15:25:08,307 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:25:08,331 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:25:51,631 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:25:51,660 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:26:25,837 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:26:25,867 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:26:53,788 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:26:53,818 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:27:13,962 INFO c.e.d.c.UserController [main] New user created: testUsername
+2021-03-01 15:27:13,981 ERROR c.e.d.c.UserController [main] Password too short
+2021-03-01 15:27:14,114 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:27:14,114 ERROR c.e.d.c.CartController [main] User for this request does not exists: testUser
+2021-03-01 15:27:14,197 INFO c.e.d.c.OrderController [main] order null submitted
+2021-03-01 15:27:14,199 ERROR c.e.d.c.OrderController [main] No user found for username: testUser
