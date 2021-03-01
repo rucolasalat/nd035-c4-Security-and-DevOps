@@ -1,0 +1,301 @@
+{
+	"variables": [],
+	"info": {
+		"name": "E-Commerce Application",
+		"_postman_id": "101e01e8-5fe1-39cb-0055-83d657cb5e0e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"url": "localhost:8080/api/user/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Andy\",\n\t\"password\": \"asdfghjkl\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"url": "localhost:8080/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Andy\",\n\t\"password\": \"asdfghjkl\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"url": "localhost:8080/logout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1MDQ5NzI0fQ.fAdgnZC36RIP4m5lrZosm-RgTjruM4dQiXgC0j2ET0H0RsLL-97utlYXLO3h7YUQqP9Oj2zmzf-LC5Is5Z8gSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Andy\",\n\t\"password\": \"asdfghjkl\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"url": "localhost:8080/api/user/id/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1Mjg0MDEwfQ.4Y184B0cZw084YyjXsCuX_AUAqpDlV1O8eGZIVf__P_f9LVp_bkmU23dOSW5KR0sZ6O9Fg8phqAzhA-jLcwHXg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Username",
+			"request": {
+				"url": "localhost:8080/api/user/Andy",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1Mjg0MDEwfQ.4Y184B0cZw084YyjXsCuX_AUAqpDlV1O8eGZIVf__P_f9LVp_bkmU23dOSW5KR0sZ6O9Fg8phqAzhA-jLcwHXg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items",
+			"request": {
+				"url": "localhost:8080/api/item",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1Mjg0MDEwfQ.4Y184B0cZw084YyjXsCuX_AUAqpDlV1O8eGZIVf__P_f9LVp_bkmU23dOSW5KR0sZ6O9Fg8phqAzhA-jLcwHXg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items By Id",
+			"request": {
+				"url": "localhost:8080/api/item/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1Mjg0MDEwfQ.4Y184B0cZw084YyjXsCuX_AUAqpDlV1O8eGZIVf__P_f9LVp_bkmU23dOSW5KR0sZ6O9Fg8phqAzhA-jLcwHXg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items By Name",
+			"request": {
+				"url": "localhost:8080/api/item/name/Round%20Widget",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1Mjg0MDEwfQ.4Y184B0cZw084YyjXsCuX_AUAqpDlV1O8eGZIVf__P_f9LVp_bkmU23dOSW5KR0sZ6O9Fg8phqAzhA-jLcwHXg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item To Cart",
+			"request": {
+				"url": "localhost:8080/api/cart/addToCart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1MDQ5NzI0fQ.fAdgnZC36RIP4m5lrZosm-RgTjruM4dQiXgC0j2ET0H0RsLL-97utlYXLO3h7YUQqP9Oj2zmzf-LC5Is5Z8gSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\",\n\"itemId\": 1,\n\"quantity\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Item From Cart",
+			"request": {
+				"url": "localhost:8080/api/cart/removeFromCart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1MDQ5NzI0fQ.fAdgnZC36RIP4m5lrZosm-RgTjruM4dQiXgC0j2ET0H0RsLL-97utlYXLO3h7YUQqP9Oj2zmzf-LC5Is5Z8gSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"Andy\",\n\"itemId\": 1,\n\"quantity\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Order",
+			"request": {
+				"url": "localhost:8080/api/order/submit/Andy",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1MDQ5NzI0fQ.fAdgnZC36RIP4m5lrZosm-RgTjruM4dQiXgC0j2ET0H0RsLL-97utlYXLO3h7YUQqP9Oj2zmzf-LC5Is5Z8gSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order History",
+			"request": {
+				"url": "localhost:8080/api/order/history/Andy",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmR5IiwiZXhwIjoxNjE1MDQ5NzI0fQ.fAdgnZC36RIP4m5lrZosm-RgTjruM4dQiXgC0j2ET0H0RsLL-97utlYXLO3h7YUQqP9Oj2zmzf-LC5Is5Z8gSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
